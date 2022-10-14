@@ -1,0 +1,12 @@
+.kapitelNumber {
+  font-size: 32em;
+  line-height: 600px;
+  color: darkgoldenrod;
+}
+
+.kapitelText {
+  font-size: 6em;
+  position: relative;
+  top: -300px;
+  line-height: 600px;
+}
