@@ -7,7 +7,8 @@ import {DesignSystemModule} from "@dvag/design-system-angular";
 import { AgendaComponent } from './agenda/agenda.component';
 import { KapitelstartComponent } from './kapitelstart/kapitelstart.component';
 import { FolieComponent } from './folie/folie.component';
-import { FooterComponent } from './footer/footer.component';
+import {HttpClientModule} from "@angular/common/http";
+import {TeaserComponent} from "./teaser/teaser.component";
 
 @NgModule({
   declarations: [
@@ -15,10 +16,11 @@ import { FooterComponent } from './footer/footer.component';
     AgendaComponent,
     KapitelstartComponent,
     FolieComponent,
-    FooterComponent
+    TeaserComponent
   ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         DesignSystemModule
     ],

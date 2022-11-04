@@ -21,4 +21,11 @@ export class KapitelstartComponent implements OnInit {
     });
   }
 
+  weiter() {
+    this.navigation.nachesteFolie();
+  }
+
+  zurueck() {
+    this.navigation.vorherigeFolie();
+  }
 }

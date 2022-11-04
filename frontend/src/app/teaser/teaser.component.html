@@ -1,1 +1,11 @@
-<p>teaser works!</p>
+<dx-text-list *ngFor="let t of data.text">
+  <dx-text *ngIf="t.type === 'main'">{{ t.text }}</dx-text>
+  <dx-text-list *ngIf="t.type === 'bullet'">
+    <dx-text>{{ t.text }}</dx-text>
+  </dx-text-list>
+</dx-text-list>
+
+<dx-text class="duration"> Diese Seite wurde in {{data.duration}} ms von einer {{ data.language }} {{ data.plan }} Function geladen </dx-text>
+
+<dx-button id="folieWeiter" label="Weiter" type="primary-m" (click)="weiter()">Weiter</dx-button>
+<dx-button id="folieZurueck" label="Zurück" type="secondary-m" (click)="zurueck()">Zurück</dx-button>

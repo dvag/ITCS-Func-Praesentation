@@ -1,0 +1,8 @@
+.main {
+  background: darkgoldenrod;
+}
+
+.bullet {
+  background: green;
+  list-style-position: inside;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {NavigationService} from "../services/navigation.service";
 
 @Component({
   selector: 'app-agenda',
@@ -8,21 +9,16 @@ import {Router} from "@angular/router";
 })
 export class AgendaComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private navigation: NavigationService) { }
 
   ngOnInit(): void {
   }
 
   weiter() {
-    this.router.navigate(
-      ['/kapitelZwei'],
-      {
-        queryParams: {
-          "kapitelNummer": 2,
-          "kapitelTitel": "Wer sind wir"
-        },
-        queryParamsHandling: "preserve"
-      }
-    );
+    this.navigation.nachesteFolie();
+  }
+
+  zurueck() {
+    this.navigation.vorherigeFolie();
   }
 }

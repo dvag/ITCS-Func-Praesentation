@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/kapitel/1/folie/1', pathMatch: 'full'},
   {path: 'kapitel/1/folie/1', component: TeaserComponent},
   {path: 'kapitel/1/folie/2', component: AgendaComponent},
-  {path: 'kapitel/:kapitelId', component: KapitelstartComponent},
+  {path: 'kapitel/:kapitelId/folie/1', component: KapitelstartComponent},
   {path: 'kapitel/:kapitelId/folie/:folienId', component: FolieComponent},
 ];
 
