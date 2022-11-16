@@ -1,30 +1,23 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, from, map, Observable, of} from "rxjs";
+import {BehaviorSubject, map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentProviderService {
 
-  private backendCounter: number = -1;
   private footerdataBroadcaster = new BehaviorSubject<Footerdata>(new Footerdata());
-
-  backends: string[] = [
-    'https://func-itcsjava-ent-01.azurewebsites.net/api/javastandard',
-    'https://func-itcsgolang-ent-01.azurewebsites.net/api/getStandardGo?',
-    'https://func-itcsgolang-ent-01.azurewebsites.net/api/getPremiumGo?'
-  ]
 
   constructor(private httpClient: HttpClient) {
 
   }
 
-  fetchData(): Observable<Foliendata> {
+  fetchData(backend: string): Observable<Foliendata> {
     let requestStartTime = performance.now();
     return this.httpClient
       .get<ApiResponse>(
-        this.getNextBackend(),
+        backend,
         {
           headers: {
             'Access-Control-Allow-Origin': 'http://localhost:4200',
@@ -66,15 +59,6 @@ export class ContentProviderService {
 
   calculateDuration(startTime: number, endTime: number): number {
     return Math.round(endTime - startTime);
-  }
-
-  private getNextBackend(): string {
-    if (this.backendCounter < this.backends.length - 1) {
-      this.backendCounter++;
-    } else {
-      this.backendCounter = 0;
-    }
-    return this.backends[this.backendCounter];
   }
 }
 
