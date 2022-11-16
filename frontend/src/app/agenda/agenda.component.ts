@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {NavigationService} from "../services/navigation.service";
+import {Kapitel, NavigationService} from "../services/navigation.service";
 
 @Component({
   selector: 'app-agenda',
@@ -9,9 +9,12 @@ import {NavigationService} from "../services/navigation.service";
 })
 export class AgendaComponent implements OnInit {
 
+  kapitel: Kapitel[] = [];
+
   constructor(private navigation: NavigationService) { }
 
   ngOnInit(): void {
+    this.kapitel = this.navigation.kapitel;
   }
 
   weiter() {

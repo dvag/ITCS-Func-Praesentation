@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
+import {BehaviorSubject, from, map, Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import {map, Observable} from "rxjs";
 export class ContentProviderService {
 
   private backendCounter: number = -1;
+  private footerdataBroadcaster = new BehaviorSubject<Footerdata>(new Footerdata());
 
   backends: string[] = [
     'https://func-itcsjava-ent-01.azurewebsites.net/api/javastandard',
@@ -20,7 +21,6 @@ export class ContentProviderService {
   }
 
   fetchData(): Observable<Foliendata> {
-    console.log('Fetch Data called')
     let requestStartTime = performance.now();
     return this.httpClient
       .get<ApiResponse>(
@@ -36,26 +36,36 @@ export class ContentProviderService {
           (source: ApiResponse) => {
             let requestEndTime = performance.now();
             const duration = this.calculateDuration(requestStartTime, requestEndTime);
-            return ContentProviderService.mapResponseToFoliendata(source, duration);
+            this.mapResponseToFooterdata(source, duration);
+            return ContentProviderService.mapResponseToFoliendata(source);
           }
         )
       );
   }
 
-  private static mapResponseToFoliendata(source: ApiResponse, duration: number): Foliendata {
+  public onFooterdataChanged(): BehaviorSubject<Footerdata> {
+    return this.footerdataBroadcaster;
+  }
+
+  private mapResponseToFooterdata(source: ApiResponse, duration: number) {
+    let newFooterdata = new Footerdata();
+    newFooterdata.duration = duration;
+    newFooterdata.plan = source.plan;
+    newFooterdata.language = source.language;
+    this.footerdataBroadcaster.next(newFooterdata);
+  }
+
+  private static mapResponseToFoliendata(source: ApiResponse): Foliendata {
     return {
-      duration: duration,
-      language: source.language,
       picturePos: source.picturePos,
       pictureUrl: source.pictureUrl,
-      plan: source.plan,
       text: source.text,
       titel: source.titel
     }
   }
 
   calculateDuration(startTime: number, endTime: number): number {
-    return endTime - startTime;
+    return Math.round(endTime - startTime);
   }
 
   private getNextBackend(): string {
@@ -85,11 +95,14 @@ export interface PresentationText {
 }
 
 export class Foliendata {
-  titel: string = "";
-  language: string = "";
-  plan: string = "";
-  pictureUrl: string = "";
-  picturePos: string = "";
+  titel: string = '';
+  pictureUrl: string = '';
+  picturePos: string = '';
   text: PresentationText[] = [];
+}
+
+export class Footerdata {
+  language: string = '';
+  plan: string = '';
   duration: number = 0;
 }

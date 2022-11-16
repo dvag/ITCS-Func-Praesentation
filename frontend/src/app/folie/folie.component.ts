@@ -72,13 +72,4 @@ export class FolieComponent implements OnInit, OnDestroy, OnChanges {
     this.contentSubscription?.unsubscribe();
     this.routerSubscription?.unsubscribe();
   }
-
-
-  weiter() {
-    this.navigationService.nachesteFolie();
-  }
-
-  zurueck() {
-    this.navigationService.vorherigeFolie();
-  }
 }

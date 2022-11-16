@@ -1,0 +1,13 @@
+.main {
+  background: darkgoldenrod;
+}
+
+.bullet {
+  background: green;
+  list-style-position: inside;
+}
+
+.content {
+  display: block;
+  height: 85vh;
+}

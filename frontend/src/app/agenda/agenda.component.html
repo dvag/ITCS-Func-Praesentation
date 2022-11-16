@@ -1,14 +1,14 @@
-<h1>Agenda</h1>
-<dx-grid base="page" mq1="6-6/*">
-  <dx-text>01 Teaser</dx-text>
-  <dx-text>02 Wer wir sind</dx-text>
-  <dx-text>03 Warum Functions nutzen?</dx-text>
-  <dx-text>04 Wann lonht sich eine Function?</dx-text>
-  <dx-text>05 Was für Nachteile haben Functions?</dx-text>
-  <dx-text>06 Welche Probleme löst GoLang</dx-text>
-  <dx-text>07 Cup de Function</dx-text>
-</dx-grid>
-
-<dx-button id="folieWeiter" label="Weiter" type="primary-m" (click)="weiter()">Weiter</dx-button>
-<dx-button id="folieZurueck" label="Zurück" type="secondary-m" (click)="zurueck()">Zurück</dx-button>
+<div class="content">
+  <dx-grid
+    class="grid"
+    base="page"
+    mq1="12/6-6/*"
+    rowgap="120h"
+  >
+    <dx-text class="headline" type="h1">Agenda</dx-text>
+    <div *ngFor="let kapitel of kapitel">
+      <dx-text class="chapter" type="ps"><span class="number">{{kapitel.id}}</span> {{kapitel.titel}}</dx-text>
+    </div>
+  </dx-grid>
+</div>
 

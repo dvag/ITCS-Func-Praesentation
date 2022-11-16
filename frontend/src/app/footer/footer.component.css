@@ -1,0 +1,11 @@
+.footerText {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.footerButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

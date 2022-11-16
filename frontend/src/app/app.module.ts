@@ -9,6 +9,7 @@ import { KapitelstartComponent } from './kapitelstart/kapitelstart.component';
 import { FolieComponent } from './folie/folie.component';
 import {HttpClientModule} from "@angular/common/http";
 import {TeaserComponent} from "./teaser/teaser.component";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {TeaserComponent} from "./teaser/teaser.component";
     AgendaComponent,
     KapitelstartComponent,
     FolieComponent,
-    TeaserComponent
+    TeaserComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,

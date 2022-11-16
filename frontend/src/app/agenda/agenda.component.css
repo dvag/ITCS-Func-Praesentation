@@ -1,0 +1,17 @@
+.number {
+  color: darkgoldenrod;
+}
+
+.content {
+  display: block;
+  height: 85vh;
+}
+
+.chapter {
+  font-size: 2.5vw;
+}
+
+.headline {
+  font-size: 3vw;
+  color: darkgoldenrod;
+}

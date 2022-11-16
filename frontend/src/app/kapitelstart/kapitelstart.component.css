@@ -1,12 +1,16 @@
+.content {
+  display: block;
+  height: 85vh;
+}
+
 .kapitelNumber {
-  font-size: 26em;
-  line-height: 600px;
+  font-size: 20vh;
   color: darkgoldenrod;
+  position: relative;
+  margin: 0;
+  top: 20vh;
 }
 
 .kapitelText {
-  font-size: 6em;
-  position: relative;
-  top: -300px;
-  line-height: 600px;
+  color: black;
 }
