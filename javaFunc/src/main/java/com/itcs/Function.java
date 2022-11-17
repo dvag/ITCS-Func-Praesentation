@@ -15,12 +15,8 @@ import java.util.Optional;
  * Azure Functions with HTTP Trigger.
  */
 public class Function {
-    /**
-     * This function listens at endpoint "/api/HttpExample". Two ways to invoke it using "curl" command in bash:
-     * 1. curl -d "HTTP Body" {your host}/api/HttpExample
-     * 2. curl "{your host}/api/HttpExample?name=HTTP%20Query"
-     */
-    @FunctionName("JavaStandard")
+   
+    @FunctionName("getJavaStandard")
     public HttpResponseMessage run(
             @HttpTrigger(
                     name = "req",
@@ -36,23 +32,16 @@ public class Function {
         var response = new Response();
         response.setChapter(1);
         response.setSide(1);
-        response.setLanguage("Java");
+        response.setLanguage("Java 11");
         response.setPlan("Standard");
-        response.setTitle("Teaser");
+        response.setTitle("JavaTeaser");
         response.setText(new Text[] {
-                new Text("Lorem ipsum dolor sit amet, " +
-                        "consetetur sadipscing elitr, " +
-                        "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
-                        "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " +
-                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-                        "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
-                        "sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. " +
-                        "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                        "main")
+                new Text("Dies ist ein Beispieltext Nr 1 in Java.",
+                        "main"),
+                new Text("Dies ist ein Beispieltext Nr 2 in Java", "bullet")
         });
-        response.setPicturePos("");
-        response.setPictureUrl("");
+        response.setPicturePos("left");
+        response.setPictureUrl("https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg");
         return response;
     }
 
