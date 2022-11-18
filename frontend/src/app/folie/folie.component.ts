@@ -33,7 +33,6 @@ export class FolieComponent implements OnInit, OnDestroy {
   private updateBackendUrl() {
     const url = this.route.snapshot.url;
     const folieKapitelNummer = url[1] + '.' + url[3];
-    console.log('Folie init: ' + folieKapitelNummer);
     this.url = this.contentProviderService.getBackendForSlide(folieKapitelNummer);
   }
 
@@ -43,6 +42,7 @@ export class FolieComponent implements OnInit, OnDestroy {
     }
     this.contentSubscription = this.contentProviderService.fetchData(this.url).subscribe((data: Foliendata) => {
       this.data = data;
+      console.log(data);
       this.loading = false;
     });
   }

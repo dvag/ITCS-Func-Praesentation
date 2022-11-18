@@ -12,9 +12,9 @@ export class ContentProviderService {
   private backends: Map<string, string> = new Map<string, string>();
 
   constructor(private httpClient: HttpClient) {
-    this.backends.set('1.2', 'https://func-itcsjava-ent-01.azurewebsites.net/api/javastandard');
-    this.backends.set('2.2', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getStandardGo?');
-    this.backends.set('2.3', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getPremiumGo?');
+    this.backends.set('1.2', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getStandardJava');
+    this.backends.set('2.2', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getStandardGo');
+    this.backends.set('2.3', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getPremiumGo');
   }
 
   fetchData(backend: string): Observable<Foliendata> {

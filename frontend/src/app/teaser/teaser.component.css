@@ -1,13 +1,33 @@
 .main {
-  background: darkgoldenrod;
+  font-size: 3vw;
+  color: #c8aa22;
 }
 
 .bullet {
-  background: green;
+  font-size: 2vw;
   list-style-position: inside;
+  color: #c8aa22;
+}
+
+.pictureRight {
+  flex-direction: row;
+}
+
+.pictureLeft {
+  flex-direction: row-reverse;
 }
 
 .content {
-  display: block;
-  height: 85vh;
+  display: flex;
+  justify-content: center;
+  height: 75vh;
 }
+
+.textContent {
+  width: 45vw;
+}
+
+.pictureContent {
+  width: 45vw;
+}
+
