@@ -1,0 +1,56 @@
+{
+  "name": "itcs-festival",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "prettier": {
+    "printWidth": 120,
+    "useTabs": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "semi": true
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "eslint"
+    ],
+    "**/*.{ts,html,yml,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@azure/functions": "^3.0.0",
+    "@types/jest": "^28.1.8",
+    "@typescript-eslint/eslint-plugin": "^5.36.0",
+    "@typescript-eslint/parser": "^5.36.0",
+    "azure-functions-core-tools": "^4.0.4829",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "jest": "^28.1.3",
+    "jest-junit": "^14.0.1",
+    "jest-sonar": "^0.2.12",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.11.0",
+    "axios": "^0.27.2",
+    "jszip": "^3.10.1",
+    "moment": "^2.29.4"
+  }
+}
