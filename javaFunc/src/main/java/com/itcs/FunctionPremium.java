@@ -11,12 +11,9 @@ import com.microsoft.azure.functions.annotation.HttpTrigger;
 
 import java.util.Optional;
 
-/**
- * Azure Functions with HTTP Trigger.
- */
-public class Function {
-   
-    @FunctionName("getJavaStandard")
+public class FunctionPremium {
+
+    @FunctionName("getPremiumJava")
     public HttpResponseMessage run(
             @HttpTrigger(
                     name = "req",
@@ -33,17 +30,16 @@ public class Function {
         response.setChapter(1);
         response.setSide(1);
         response.setLanguage("Java 11");
-        response.setPlan("Standard");
+        response.setPlan("Premium");
         response.setTitle("JavaTeaser");
         response.setText(new Text[] {
-                new Text("Dies ist ein Beispieltext Nr 1 in Java.",
-                        "main"),
-                new Text("Dies ist ein Beispieltext Nr 2 in Java", "bullet")
+                new Text("Dies ist ein Beispieltext Nr 1 in Java.", "main"),
+                new Text("Dies ist ein Beispieltext Nr 2 in Java.", "bullet")
         });
         response.setPicturePos("left");
         response.setPictureUrl("https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg");
         return response;
     }
 
-
+    
 }
