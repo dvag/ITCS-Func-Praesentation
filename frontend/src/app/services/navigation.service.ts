@@ -10,13 +10,13 @@ export class NavigationService {
   aktuelleFolie: number = 1;
 
   kapitel: Kapitel[] = [
-    new Kapitel(1, 'Teaser', 2, ''),
-    new Kapitel(2, 'Wer wir sind', 4, ''),
-    new Kapitel(3, 'Warum Functions?', 2, ''),
-    new Kapitel(4, 'Wann Functions?', 1, ''),
-    new Kapitel(5, 'Nachteile Functions', 1, ''),
-    new Kapitel(6, 'GoLang!', 1, ''),
-    new Kapitel(7, 'Cup de Function', 1, '')
+    new Kapitel(1, 'Teaser', 2),
+    new Kapitel(2, 'Wer wir sind', 4),
+    new Kapitel(3, 'Warum Functions?', 2),
+    new Kapitel(4, 'Wann Functions?', 1),
+    new Kapitel(5, 'Nachteile Functions', 1),
+    new Kapitel(6, 'GoLang!', 1),
+    new Kapitel(7, 'Cup de Function', 1)
   ];
 
 
@@ -32,7 +32,6 @@ export class NavigationService {
     } else {
       this.router.navigate(['kapitel', this.aktuellesKapitel, 'folie', ++this.aktuelleFolie]);
     }
-
   }
 
   vorherigeFolie() {
@@ -58,8 +57,7 @@ export class Kapitel {
   constructor(
     public id: number,
     public titel: string,
-    public anzahlFolien: number,
-    public apiUrl: string) {
+    public anzahlFolien: number) {
   }
 }
 

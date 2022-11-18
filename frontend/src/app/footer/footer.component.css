@@ -1,5 +1,6 @@
 .footerText {
   position: absolute;
+  font-size: 3vh;
   bottom: 20px;
   left: 20px;
 }

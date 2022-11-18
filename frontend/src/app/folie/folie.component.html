@@ -1,4 +1,4 @@
-<div id="test" class="content">
+<div class="content" *ngIf="!loading">
   <dx-text-list *ngFor="let t of data.text">
     <dx-text *ngIf="t.type === 'main'">{{ t.text }}</dx-text>
     <dx-text-list *ngIf="t.type === 'bullet'">

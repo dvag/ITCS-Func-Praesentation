@@ -21,13 +21,12 @@ export class TeaserComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-
-    let url = this.route.snapshot.data['url'];
-
-    this.contentSubscription = this.contentProviderService.fetchData(url).subscribe((data: Foliendata) => {
+    const url = this.route.snapshot.url;
+    const folieKapitelNummer = url[1] + '.' + url[3];
+    const backend = this.contentProviderService.getBackendForSlide(folieKapitelNummer);
+    this.contentSubscription = this.contentProviderService.fetchData(backend).subscribe((data: Foliendata) => {
       this.data = data;
     });
-
   }
 
   ngOnDestroy() {

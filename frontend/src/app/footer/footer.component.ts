@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
 import {ContentProviderService, Footerdata} from "../services/content-provider.service";
 import {NavigationService} from "../services/navigation.service";
 import {Subscription} from "rxjs";
@@ -25,13 +25,23 @@ export class FooterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.footerDataSubscription = this.contentProviderService.onFooterdataChanged().subscribe(data => {
       this.data = data;
-      this.showDuration = true;
+      this.showDuration = data.language != '';
     });
   }
 
   ngOnDestroy(): void {
     if(this.footerDataSubscription) {
       this.footerDataSubscription.unsubscribe();
+    }
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if(event.key == 'ArrowRight' || event.key == 'PageDown'){
+      this.weiter();
+    }
+    if(event.key == 'ArrowLeft' || event.key == 'PageUp'){
+      this.zurueck();
     }
   }
 

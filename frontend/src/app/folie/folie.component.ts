@@ -15,6 +15,7 @@ export class FolieComponent implements OnInit, OnDestroy {
   url: string = '';
   private contentSubscription: Subscription | undefined;
   private routerSubscription: Subscription | undefined;
+  loading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,13 +25,16 @@ export class FolieComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.url = this.route.snapshot.data['url'];
-    this.route.data.subscribe(data => {
-      this.url = data['url'];
-    });
-
+    this.updateBackendUrl();
     this.initContentSubscription();
     this.initContentOnFolieChangeSubscription();
+  }
+
+  private updateBackendUrl() {
+    const url = this.route.snapshot.url;
+    const folieKapitelNummer = url[1] + '.' + url[3];
+    console.log('Folie init: ' + folieKapitelNummer);
+    this.url = this.contentProviderService.getBackendForSlide(folieKapitelNummer);
   }
 
   private initContentSubscription() {
@@ -39,6 +43,7 @@ export class FolieComponent implements OnInit, OnDestroy {
     }
     this.contentSubscription = this.contentProviderService.fetchData(this.url).subscribe((data: Foliendata) => {
       this.data = data;
+      this.loading = false;
     });
   }
 
@@ -46,9 +51,11 @@ export class FolieComponent implements OnInit, OnDestroy {
     this.routerSubscription = this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         if (!event.url.endsWith('1')) {
+         this.updateBackendUrl();
           this.contentSubscription?.unsubscribe();
           this.contentSubscription = this.contentProviderService.fetchData(this.url).subscribe((data: Foliendata) => {
             this.data = data;
+            this.loading = false;
           });
         }
       }
@@ -58,5 +65,6 @@ export class FolieComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.contentSubscription?.unsubscribe();
+    this.routerSubscription?.unsubscribe();
   }
 }
