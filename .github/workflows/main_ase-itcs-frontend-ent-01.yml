@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: itcs-frontend
-          path: .
+          path: ./frontend/dist/itcs-frontend
 
   deploy:
     runs-on: ubuntu-latest
