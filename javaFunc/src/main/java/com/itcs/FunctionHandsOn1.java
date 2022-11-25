@@ -16,7 +16,7 @@ import java.util.Optional;
  */
 public class FunctionStandard {
    
-    @FunctionName("getHandsOn")
+    @FunctionName("getHandsOnJava1")
     public HttpResponseMessage run(
             @HttpTrigger(
                     name = "req",
