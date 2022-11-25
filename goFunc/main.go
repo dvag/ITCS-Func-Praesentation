@@ -120,7 +120,7 @@ func getHandsOnGo(w http.ResponseWriter, r *http.Request) {
 			{
 				Text: "Azure Erweiterungen",
 				Type: "bullet",
-			}
+			},
 		},
 	}
 	json.NewEncoder(w).Encode(res)
