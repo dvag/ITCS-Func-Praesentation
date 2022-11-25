@@ -4,7 +4,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     context.log('HTTP trigger function processed a request.');
     const name = (req.query.name || (req.body && req.body.name));
     const responseMessage = {
-        "title": "Hier kommt ein Titel",
+        "title": "Was sind Azure Functions?",
         "language": "TypeScript",
         "plan": "Standard Plan",
         "chapter": "1",
@@ -13,13 +13,45 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         "picturePos": "left",
         "text": [
             {
-                "text": "Dies ist Text Nr 1",
+                "text": "Serverless, ereignisbasierte Lösung von Microsoft",
                 "type": "main"
             },
             {
-                "text": "Dies ist Text Nr 2",
+                "text": "Ereignisse können sein:",
+                "type": "main"
+            },
+            {
+                "text": "HTTP Trigger",
                 "type": "bullet"
             },
+            {
+                "text": "Queue",
+                "type": "bullet"
+            },
+            {
+                "text": "Zeittrigger (CRON)",
+                "type": "bulet"
+            },
+            {
+                "text": "Event Grid",
+                "type": "bullet"
+            },
+            {
+                "text": "Bei Auslösen:",
+                "type": "main"
+            },
+            {
+                "text": "Sourcen aus Blobstorage",
+                "type": "bullet"
+            },
+            {
+                "text": "Kudu Container wird gestartet",
+                "type": "bullet"
+            },
+            {
+                "text": "Werden nach gewisser Zeit wieder abgeräumt",
+                "type": "bullet"
+            }
         ]
     }
     context.res = {
