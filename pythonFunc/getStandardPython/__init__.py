@@ -22,7 +22,7 @@ def create_teaser_response() -> Response:
     """
     response = Response()
     
-    response.title = "Teaser Python"
+    response.title = "Anwendungsbereiche"
     response.language = "Python 3"
     response.plan = "Standard Plan"
     response.chapter = "1"
@@ -30,9 +30,14 @@ def create_teaser_response() -> Response:
     response.picture_url = "https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg"
     response.picture_pos = "left"
     response.text = [
-        Text(text="Dies ist Text Nr 1", type="main"), 
-        Text(text="Dies ist Text Nr 2", type="bullet"),
-        Text(text="Dies ist Text Nr 3", type="bullet")
+        Text(text="Consumption Plan", type="main"), 
+        Text(text="nicht zeitkritischer Anwendungen", type="bullet"), 
+        Text(text="Kaltstart verzögert Antwortzeiten", type="bullet"),
+        Text(text="sporadisch genutzte Anwendungen", type="bullet"), 
+        Text(text="Anwendungen mit großen Intervallen", type="bullet"),
+        Text(text="Premium Plan", type="main"),
+        Text(text="Zeitkritische Anwendungen", type="bullet"),
+        Text(text="Programmiersprachen mit großen Binarys", type="bullet")
         ]
 
     return response
