@@ -31,7 +31,7 @@ func main() {
 func getStandardGo(w http.ResponseWriter, r *http.Request) {
 	fmt.Print("Hit Endpoint getStandardGo")
 	res := PresResponse{
-		Title:      "TestTitle",
+		Title:      "Warum Go",
 		Language:   "Go",
 		Plan:       "Standard",
 		Chapter:    1,
@@ -40,12 +40,24 @@ func getStandardGo(w http.ResponseWriter, r *http.Request) {
 		PicturePos: "left",
 		Text: []TextPoint{
 			{
-				Text: "FirstText",
+				Text: "kompilierbare Programmiersprache, die Nebenläufigkeit und automatische Speicherbereinigung unterstützt",
 				Type: "main",
 			},
 			{
-				Text: "FirstText",
-				Type: "bullet",
+				Text: "Binary wird precompiled und kann direkt ausgeführt werden",
+				Type: "main",
+			},
+			{
+				Text: "Unterstützt im Core bereits viele Webfunktionen",
+				Type: "main",
+			},
+			{
+				Text: "Resultat ist ein kleines Binary was schnell geladen werden kann",
+				Type: "main",
+			},
+			{
+				Text: "Kann für jedes Betriebssystem compiliert werden",
+				Type: "main",
 			},
 		},
 	}
