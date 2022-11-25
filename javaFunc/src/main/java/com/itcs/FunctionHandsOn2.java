@@ -14,7 +14,7 @@ import java.util.Optional;
 /**
  * Azure Functions with HTTP Trigger.
  */
-public class FunctionStandard {
+public class FunctionHandsOn2 {
    
     @FunctionName("getHandsOnJava2")
     public HttpResponseMessage run(
