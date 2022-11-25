@@ -31,10 +31,10 @@ public class FunctionPremium {
         response.setSide(1);
         response.setLanguage("Java 11");
         response.setPlan("Premium");
-        response.setTitle("JavaTeaser");
+        response.setTitle("Wer wir sind");
         response.setText(new Text[] {
-                new Text("Dies ist ein Beispieltext Nr 1 in Java.", "main"),
-                new Text("Dies ist ein Beispieltext Nr 2 in Java.", "bullet")
+                new Text("Maximilian Bodsch", "main"),
+                new Text("Deutsche Vermögensberatung", "main")
         });
         response.setPicturePos("left");
         response.setPictureUrl("https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg");
