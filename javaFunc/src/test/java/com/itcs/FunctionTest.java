@@ -45,9 +45,10 @@ public class FunctionTest {
         doReturn(Logger.getGlobal()).when(context).getLogger();
 
         // Invoke
-        final HttpResponseMessage ret = new Function().run(req, context);
-
+        final HttpResponseMessage retStandard = new FunctionStandard().run(req, context);
+        final HttpResponseMessage retPremium = new FunctionPremium().run(req, context);
         // Verify
-        assertEquals(ret.getStatus(), HttpStatus.OK);
+        assertEquals(retStandard.getStatus(), HttpStatus.OK);
+        assertEquals(retPremium.getStatus(), HttpStatus.OK);
     }
 }
