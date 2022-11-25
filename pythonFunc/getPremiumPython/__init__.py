@@ -22,7 +22,7 @@ def create_teaser_response() -> Response:
     """
     response = Response()
     
-    response.title = "Teaser Python"
+    response.title = "Nachteile"
     response.language = "Python 3"
     response.plan = "Premium Plan"
     response.chapter = "1"
@@ -30,9 +30,13 @@ def create_teaser_response() -> Response:
     response.picture_url = "https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg"
     response.picture_pos = "left"
     response.text = [
-        Text(text="Dies ist Text Nr 1", type="main"), 
-        Text(text="Dies ist Text Nr 2", type="bullet"),
-        Text(text="Dies ist Text Nr 3", type="bullet")
+        Text(text="Allgemein", type="main"), 
+        Text(text="Laufzeit begrenzt auf fünf Minuten", type="bullet"),
+        Text(text="Ein Deploymentslot pro Ressourcengruppe", type="bullet"),
+        Text(text="Consumption Plan", type="main"), 
+        Text(text="Function wird nach einer gewissen Zeit abgeschaltet (Kaltstartzeit)", type="bullet"),
+        Text(text="Premium Plan", type="main"),
+        Text(text="Sehr viel teurer als Consumption Plan", type="bullet")
         ]
 
     return response
