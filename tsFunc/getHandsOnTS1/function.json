@@ -16,5 +16,5 @@
     }
   ],
   "enableForwardingHttpRequest": true,
-  "scriptFile": "../dist/getHandsOnTS/index.js"
+  "scriptFile": "../dist/getHandsOnTS1/index.js"
 }
