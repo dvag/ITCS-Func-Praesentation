@@ -34,10 +34,16 @@ public class FunctionStandard {
         response.setSide(1);
         response.setLanguage("Java 11");
         response.setPlan("Standard");
-        response.setTitle("JavaTeaser");
+        response.setTitle("Hands on: Serverless Golang mit Azure Functions");
         response.setText(new Text[] {
-                new Text("Dies ist ein Beispieltext Nr 1 in Java.", "main"),
-                new Text("Dies ist ein Beispieltext Nr 2 in Java.", "bullet")
+                new Text("Die Inhalte werden per Functions geladen!", "main"),
+                new Text("Unten Links seht ihr die Daten", "main"),
+                new Text("Verschiedene Sprachen wurden verwendet:", "main"),
+                new Text("Java", "bullet"),
+                new Text("Typescript", "bullet"),
+                new Text("Python", "bullet"),
+                new Text("GoLang", "bullet"),
+                new Text("Powershell", "bullet")
         });
         response.setPicturePos("left");
         response.setPictureUrl("https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg");
