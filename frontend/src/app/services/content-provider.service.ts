@@ -12,9 +12,19 @@ export class ContentProviderService {
   private backends: Map<string, string> = new Map<string, string>();
 
   constructor(private httpClient: HttpClient) {
-    this.backends.set('1.2', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getStandardJava');
-    this.backends.set('2.2', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getStandardGo');
-    this.backends.set('2.3', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getPremiumGo');
+    this.backends.set('1.2', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getStandardJava'); // Teaser
+    this.backends.set('2.2', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getPremiumJava'); // Wer wir sind
+    this.backends.set('3.2', 'https://func-itcsts-ent-01.azurewebsites.net/api/getStandardTS'); // Was sind Functions
+    this.backends.set('4.2', 'https://func-itcsts-ent-01.azurewebsites.net/api/getPremiumTS'); // Warum wechseln auf Functions
+    this.backends.set('5.2', 'https://func-itcspython-ent-01.azurewebsites.net/api/getStandardPython'); // Anwendungsbereiche
+    this.backends.set('6.2', 'https://func-itcspython-ent-01.azurewebsites.net/api/getPremiumPython'); // Nachteile
+    this.backends.set('7.2', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getStandardGo'); // GoLang
+    this.backends.set('8.2', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getHandsOnJava1'); // HandsOn: HTTP Server
+    this.backends.set('8.3', 'https://func-itcsts-ent-01.azurewebsites.net/api/getHandsOnTS1'); // HandsOn: Request Function
+    this.backends.set('8.4', 'https://func-itcspython-ent-01.azurewebsites.net/api/getHandsOnPython'); // HandsOn: Function Definition
+    this.backends.set('8.5', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getHandsOnGo'); // Function Host
+    this.backends.set('8.6', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getHandsOnJava2'); // Deployment
+    this.backends.set('8.7', 'https://func-itcsts-ent-01.azurewebsites.net/api/getHandsOnTS1'); // Ansicht in Azure
   }
 
   fetchData(backend: string): Observable<Foliendata> {

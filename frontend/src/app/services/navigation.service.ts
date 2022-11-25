@@ -11,12 +11,13 @@ export class NavigationService {
 
   kapitel: Kapitel[] = [
     new Kapitel(1, 'Teaser', 2),
-    new Kapitel(2, 'Wer wir sind', 4),
-    new Kapitel(3, 'Warum Functions?', 2),
-    new Kapitel(4, 'Wann Functions?', 1),
-    new Kapitel(5, 'Nachteile Functions', 1),
-    new Kapitel(6, 'GoLang!', 1),
-    new Kapitel(7, 'Cup de Function', 1)
+    new Kapitel(2, 'Wer wir sind', 2),
+    new Kapitel(3, 'Was sind Functions?', 2),
+    new Kapitel(4, 'Warum wechseln?', 2),
+    new Kapitel(5, 'Anwendungsbereiche', 2),
+    new Kapitel(6, 'Nachteile', 2),
+    new Kapitel(7, 'GoLang', 2),
+    new Kapitel(8, 'Hands On', 7)
   ];
 
 

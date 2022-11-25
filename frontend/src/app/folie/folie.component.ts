@@ -42,7 +42,6 @@ export class FolieComponent implements OnInit, OnDestroy {
     }
     this.contentSubscription = this.contentProviderService.fetchData(this.url).subscribe((data: Foliendata) => {
       this.data = data;
-      console.log(data);
       this.loading = false;
     });
   }
