@@ -4,7 +4,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     context.log('HTTP trigger function processed a request.');
     const name = (req.query.name || (req.body && req.body.name));
     const responseMessage = {
-        "title": "Hier kommt ein Titel",
+        "title": "Warum auf Functions wechseln",
         "language": "TypeScript",
         "plan": "Premium Plan",
         "chapter": "1",
@@ -13,13 +13,41 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         "picturePos": "left",
         "text": [
             {
-                "text": "Dies ist Text Nr 1",
+                "text": "Functions werden als SaaS angeboten",
                 "type": "main"
             },
             {
-                "text": "Dies ist Text Nr 2",
+                "text": "Für Linux und Windows verfügbar",
+                "type": "main"
+            },
+            {
+                "text": "Infrastruktur von Azure verwaltet",
+                "type": "main"
+            },
+            {
+                "text": "Consumptionplan -> Pay what you use",
+                "type": "main"
+            },
+            {
+                "text": "Ressourcen sind dabei nur kurz Online",
                 "type": "bullet"
             },
+            {
+                "text": "Premiumplan -> Worker sind permanent verfügbar",
+                "type": "main"
+            },
+            {
+                "text": "Ressourcen werden automatisch skaliert",
+                "type": "main"
+            },
+            {
+                "text": "Routing übernimmt Azure",
+                "type": "main"
+            },
+            {
+                "text": "Deploymentslots für Hochverfügbarkeit / rollierende Deployments",
+                "type": "main"
+            }
         ]
     }
     context.res = {
