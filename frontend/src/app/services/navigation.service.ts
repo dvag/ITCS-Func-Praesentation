@@ -17,7 +17,8 @@ export class NavigationService {
     new Kapitel(5, 'Anwendungsbereiche', 2),
     new Kapitel(6, 'Nachteile', 2),
     new Kapitel(7, 'GoLang', 2),
-    new Kapitel(8, 'Hands On', 7)
+    new Kapitel(8, 'Hands On', 7),
+    new Kapitel(9, 'Vielen Dank', 1),
   ];
 
 

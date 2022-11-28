@@ -1,0 +1,20 @@
+.content {
+  display: grid;
+  height: 75vh;
+}
+
+.qrCodes {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.qrCode {
+  height: 50vh;
+  width: 50vh;
+}
+
+.text {
+  font-size: 3vw;
+  color: #c8aa22;
+}

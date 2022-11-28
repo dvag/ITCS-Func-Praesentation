@@ -11,6 +11,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {TeaserComponent} from "./teaser/teaser.component";
 import {FooterComponent} from './footer/footer.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { AbschlussComponent } from './abschluss/abschluss.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     KapitelstartComponent,
     FolieComponent,
     TeaserComponent,
-    FooterComponent
+    FooterComponent,
+    AbschlussComponent
   ],
   imports: [
     BrowserModule,
