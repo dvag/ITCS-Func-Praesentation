@@ -1,3 +1,14 @@
-.content {
-  margin: 20px;
+.dvagIcon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 15vh;
+  width: 15vh;
+}
+
+.whiteBackground {
+  height: 98vh;
+  background-color: white;
+  padding-left: 3vw;
+  padding-top: 2vh;
 }

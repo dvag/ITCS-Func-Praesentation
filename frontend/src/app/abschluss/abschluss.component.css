@@ -5,13 +5,12 @@
 
 .qrCodes {
   display: flex;
-  justify-content: space-around;
-  width: 100vw;
+  justify-content: space-evenly;
 }
 
 .qrCode {
-  height: 50vh;
-  width: 50vh;
+  height: 40vh;
+  width: 40vh;
 }
 
 .text {

@@ -1,11 +1,13 @@
-<dx-text
-  *ngIf="showDuration"
-  class="footerText"
->
-  Diese Seite wurde in ca. <strong>{{ data.duration }}</strong> ms von einer <strong>{{ data.language }} {{ data.plan }}</strong> Function geladen
-</dx-text>
+<div class="content">
+  <dx-text
+    *ngIf="showDuration"
+    class="footerText"
+  >
+    Diese Seite wurde in ca. <strong>{{ data.duration }}</strong> ms von einer <strong>{{ data.language }} {{ data.plan }}</strong> Function geladen
+  </dx-text>
 
-<div class="footerButton">
-  <dx-button id="folieWeiter" label="Weiter" type="primary-m" (click)="weiter()">Weiter</dx-button>
-  <dx-button id="folieZurueck" label="Zurück" type="secondary-m" (click)="zurueck()">Zurück</dx-button>
+  <div class="footerButton">
+    <dx-button id="folieZurueck" label="Zurück" type="secondary-m" (click)="zurueck()">Zurück</dx-button>
+    <dx-button id="folieWeiter" label="Weiter" type="primary-m" (click)="weiter()">Weiter</dx-button>
+  </div>
 </div>

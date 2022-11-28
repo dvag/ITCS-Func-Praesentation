@@ -1,9 +1,14 @@
+.title {
+  font-size: 2.5vw;
+  margin-bottom: 5vh;
+}
+
 .main {
-  font-size: 2.8vw;
+  font-size: 1.8vw;
 }
 
 .bullet {
-  font-size: 1.8vw;
+  font-size: 1.25vw;
   list-style-position: inside;
 }
 
@@ -27,5 +32,11 @@
 
 .pictureContent {
   width: 30vw;
+}
+
+.picture {
+  object-fit: fill;
+  width: 95%;
+  height: auto
 }
 

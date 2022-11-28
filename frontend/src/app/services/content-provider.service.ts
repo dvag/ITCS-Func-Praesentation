@@ -66,7 +66,7 @@ export class ContentProviderService {
       picturePos: source.picturePos,
       pictureUrl: source.pictureUrl,
       text: source.text,
-      titel: source.titel
+      title: source.title
     }
   }
 
@@ -80,7 +80,7 @@ export class ContentProviderService {
 }
 
 export interface ApiResponse {
-  titel: string;
+  title: string;
   language: string;
   plan: string;
   chapter: number;
@@ -96,7 +96,7 @@ export interface PresentationText {
 }
 
 export class Foliendata {
-  titel: string = '';
+  title: string = '';
   pictureUrl: string = '';
   picturePos: string = '';
   text: PresentationText[] = [];

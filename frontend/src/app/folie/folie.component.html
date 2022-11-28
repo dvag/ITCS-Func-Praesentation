@@ -1,3 +1,6 @@
+<div>
+  <div class="title dvagText"><strong>{{data.title}}</strong></div>
+</div>
 <div class="content" [ngClass]="data.picturePos=='right' ? 'pictureRight' : 'pictureLeft'">
   <div class="textContent">
     <ul>
@@ -8,7 +11,7 @@
     </ul>
   </div>
 
-  <div class="pictureContent">
-    <img src="{{ data.pictureUrl }}" alt="Bild wird geladen">
+  <div class="pictureContent" *ngIf="data.pictureUrl">
+    <img class="picture" src="{{ data.pictureUrl }}" alt="Bild wird geladen">
   </div>
 </div>
