@@ -2,8 +2,8 @@
   <div class="textContent">
     <ul>
       <div *ngFor="let t of data.text">
-        <li *ngIf="t.type === 'main'" class="main">{{ t.text }}</li>
-        <li *ngIf="t.type === 'bullet'" class="bullet">{{ t.text }}</li>
+        <li *ngIf="t.type === 'main'" class="main dvagText">{{ t.text }}</li>
+        <li *ngIf="t.type === 'bullet'" class="bullet dvagText">{{ t.text }}</li>
       </div>
     </ul>
   </div>

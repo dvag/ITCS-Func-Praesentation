@@ -1,12 +1,10 @@
 .main {
-  font-size: 3vw;
-  color: #c8aa22;
+  font-size: 2.8vw;
 }
 
 .bullet {
-  font-size: 2vw;
+  font-size: 1.8vw;
   list-style-position: inside;
-  color: #c8aa22;
 }
 
 .pictureRight {
@@ -24,10 +22,10 @@
 }
 
 .textContent {
-  width: 45vw;
+  width: 60vw;
 }
 
 .pictureContent {
-  width: 45vw;
+  width: 30vw;
 }
 

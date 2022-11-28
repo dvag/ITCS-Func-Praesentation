@@ -8,7 +8,6 @@ import {AgendaComponent} from './agenda/agenda.component';
 import {KapitelstartComponent} from './kapitelstart/kapitelstart.component';
 import {FolieComponent} from './folie/folie.component';
 import {HttpClientModule} from "@angular/common/http";
-import {TeaserComponent} from "./teaser/teaser.component";
 import {FooterComponent} from './footer/footer.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { AbschlussComponent } from './abschluss/abschluss.component';
@@ -19,7 +18,6 @@ import { AbschlussComponent } from './abschluss/abschluss.component';
     AgendaComponent,
     KapitelstartComponent,
     FolieComponent,
-    TeaserComponent,
     FooterComponent,
     AbschlussComponent
   ],
