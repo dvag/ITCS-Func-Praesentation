@@ -24,7 +24,7 @@ export class ContentProviderService {
     this.backends.set('8.4', 'https://func-itcspython-ent-01.azurewebsites.net/api/getHandsOnPython'); // HandsOn: Function Definition
     this.backends.set('8.5', 'https://func-itcsgolang-ent-01.azurewebsites.net/api/getHandsOnGo'); // Function Host
     this.backends.set('8.6', 'https://func-itcsjava-ent-01.azurewebsites.net/api/getHandsOnJava2'); // Deployment
-    this.backends.set('8.7', 'https://func-itcsts-ent-01.azurewebsites.net/api/getHandsOnTS1'); // Ansicht in Azure
+    this.backends.set('8.7', 'https://func-itcsts-ent-01.azurewebsites.net/api/getHandsOnTS2'); // Ansicht in Azure
   }
 
   fetchData(backend: string): Observable<Foliendata> {
