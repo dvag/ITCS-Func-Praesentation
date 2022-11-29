@@ -36,7 +36,7 @@ func getStandardGo(w http.ResponseWriter, r *http.Request) {
 		Plan:       "Standard",
 		Chapter:    1,
 		Side:       1,
-		PictureUrl: "https://www.evkircheschaafheim.de/wp-content/uploads/2014/09/Dummybild.jpg",
+		PictureUrl: "https://stfuncitcsgolanent01.blob.core.windows.net/bilder/Go.png",
 		PicturePos: "left",
 		Text: []TextPoint{
 			{
@@ -74,7 +74,7 @@ func getPremiumGo(w http.ResponseWriter, r *http.Request) {
 		Plan:       "Premium",
 		Chapter:    1,
 		Side:       1,
-		PictureUrl: "https://www.evkircheschaafheim.de/wp-content/uploads/2014/09/Dummybild.jpg",
+		PictureUrl: "",
 		PicturePos: "left",
 		Text: []TextPoint{
 			{
@@ -98,7 +98,7 @@ func getHandsOnGo(w http.ResponseWriter, r *http.Request) {
 		Plan:       "Premium",
 		Chapter:    1,
 		Side:       1,
-		PictureUrl: "https://www.evkircheschaafheim.de/wp-content/uploads/2014/09/Dummybild.jpg",
+		PictureUrl: "https://stfuncitcsgolanent01.blob.core.windows.net/bilder/HostJson.png",
 		PicturePos: "left",
 		Text: []TextPoint{
 			{
@@ -131,11 +131,6 @@ func kill(w http.ResponseWriter, r *http.Request) {
 }
 
 func runAPi() {
-	fmt.Printf("Welcome! Available Enpoints are:")
-	fmt.Println("/api/getStandardGo")
-	fmt.Println("/api/getPremiumGo")
-	fmt.Println("/api/getHandsOnGo")
-	fmt.Println("/api/kill")
 	listenAddr := ":8081"
 	if val, ok := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT"); ok { // ok will receive a bool that will be set to true if "FUNCTIONS_CUSTOMHANDLER_PORT" was actually present in LookUpEnv
 		listenAddr = ":" + val
@@ -145,6 +140,5 @@ func runAPi() {
 	srv.HandleFunc("/api/getStandardGo", getStandardGo)
 	srv.HandleFunc("/api/getPremiumGo", getPremiumGo)
 	srv.HandleFunc("/api/getHandsOnGo", getHandsOnGo)
-	srv.HandleFunc("/api/kill", kill)
 	log.Fatal(http.ListenAndServe(listenAddr, srv))
 }

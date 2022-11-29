@@ -27,7 +27,7 @@ def create_teaser_response() -> Response:
     response.plan = "Premium Plan"
     response.chapter = "1"
     response.side = "1"
-    response.picture_url = "https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg"
+    response.picture_url = ""
     response.picture_pos = "left"
     response.text = [
         Text(text="Allgemein", type="main"), 

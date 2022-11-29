@@ -9,7 +9,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         "plan": "Standard Plan",
         "chapter": "1",
         "side": "1",
-        "pictureUrl": "https://www.evkircheschaafheim.de/wp-content/uploads/2014/09/Dummybild.jpg",
+        "pictureUrl": "https://stfuncitcsgolanent01.blob.core.windows.net/bilder/functions-png.PNG",
         "picturePos": "left",
         "text": [
             {

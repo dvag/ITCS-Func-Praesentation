@@ -37,7 +37,7 @@ public class FunctionPremium {
                 new Text("Deutsche Vermögensberatung", "main")
         });
         response.setPicturePos("left");
-        response.setPictureUrl("https://www.jeffsblog.at/wp-content/uploads/2019/01/5-Windows-95-wallpaper.jpg");
+        response.setPictureUrl("https://stfuncitcsgolanent01.blob.core.windows.net/bilder/DVAGIT.png");
         return response;
     }
 

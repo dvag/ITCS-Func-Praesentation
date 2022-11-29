@@ -1,6 +1,6 @@
 {
-    "azureFunctions.deploySubpath": "goFunc",
-    "azureFunctions.projectLanguage": "Custom",
+    "azureFunctions.deploySubpath": "tsFunc",
+    "azureFunctions.projectLanguage": "TypeScript",
     "azureFunctions.projectRuntime": "~3",
     "debug.internalConsoleOptions": "neverOpen"
 }
