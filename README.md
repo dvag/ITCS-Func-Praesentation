@@ -13,4 +13,4 @@ Als Familienunternehmen leben wir unsere Werte.
 Leistungsorientiert
 Menschlich
 Stark
-www.dvag.
+www.dvag.com
