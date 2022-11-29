@@ -16,6 +16,7 @@ export class FolieComponent implements OnInit, OnDestroy {
   private contentSubscription: Subscription | undefined;
   private routerSubscription: Subscription | undefined;
   loading: boolean = true;
+  hasText: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -48,6 +49,7 @@ export class FolieComponent implements OnInit, OnDestroy {
     }
     this.contentSubscription = this.contentProviderService.fetchData(this.url).subscribe((data: Foliendata) => {
       this.data = data;
+      this.hasText = data.text.length > 0;
       this.loading = false;
     });
   }
@@ -60,6 +62,7 @@ export class FolieComponent implements OnInit, OnDestroy {
           this.contentSubscription?.unsubscribe();
           this.contentSubscription = this.contentProviderService.fetchData(this.url).subscribe((data: Foliendata) => {
             this.data = data;
+            this.hasText = data.text.length > 0;
             this.loading = false;
           });
         }

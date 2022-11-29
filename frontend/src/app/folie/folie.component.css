@@ -35,6 +35,10 @@
   width: 30vw;
 }
 
+.pictureContentStreched {
+  width: 55vw;
+}
+
 .picture {
   object-fit: fill;
   width: 95%;
