@@ -41,7 +41,7 @@ public class FunctionHandsOn2 {
                 new Text("Storage Account der Function", "main")
         });
         response.setPicturePos("left");
-        response.setPictureUrl("https://stfuncitcsgolanent01.blob.core.windows.net/bilder/function_portal.png");
+        response.setPictureUrl("https://stfuncitcsgolanent01.blob.core.windows.net/bilder/deployment.PNG");
         return response;
     }
 
