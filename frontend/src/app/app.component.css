@@ -1,8 +1,9 @@
 .dvagLogo {
-  transform: scale(300%);
+  transform: scale(250%);
   position: absolute;
-  left: 80px;
-  top: 80px;
+  left: 85vw;
+  top: 3vh;
+  
 }
 
 .whiteBackground {
