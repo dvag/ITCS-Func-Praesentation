@@ -2,7 +2,7 @@
   <div class="title dvagText"><strong>{{data.title}}</strong></div>
 </div>
 <div class="content" [ngClass]="data.picturePos=='right' ? 'pictureRight' : 'pictureLeft'">
-  <div class="textContent">
+  <div class="textContent" *ngIf="hasText">
     <ul>
       <div *ngFor="let t of data.text">
         <li *ngIf="t.type === 'main'" class="main dvagText">{{ t.text }}</li>
@@ -11,7 +11,7 @@
     </ul>
   </div>
 
-  <div class="pictureContent" *ngIf="data.pictureUrl">
+  <div [ngClass]="hasText ? 'pictureContent' : 'pictureContentStreched'" *ngIf="data.pictureUrl">
     <img class="picture" src="{{ data.pictureUrl }}" alt="Bild wird geladen">
   </div>
 </div>

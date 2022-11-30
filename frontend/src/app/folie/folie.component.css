@@ -1,6 +1,7 @@
 .title {
   font-size: 2.5vw;
   margin-bottom: 5vh;
+  margin-left: 10vw;
 }
 
 .main {
@@ -32,6 +33,10 @@
 
 .pictureContent {
   width: 30vw;
+}
+
+.pictureContentStreched {
+  width: 55vw;
 }
 
 .picture {

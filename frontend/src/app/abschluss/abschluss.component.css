@@ -13,6 +13,12 @@
   width: 40vh;
 }
 
-.text {
+.title {
   font-size: 3vw;
+  margin-bottom: 5vh;
+  margin-left: 10vw;
+}
+
+.text {
+  font-size: 2vw;
 }
