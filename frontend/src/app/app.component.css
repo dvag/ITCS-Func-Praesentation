@@ -1,8 +1,8 @@
 .dvagLogo {
-  transform: scale(250%);
-  position: absolute;
+  transform: scale(200%);
+  position: relative;
   left: 85vw;
-  top: 3vh;
+  top: 1.5vh;
   
 }
 

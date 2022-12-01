@@ -25,16 +25,16 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
                 "type": "main"
             },
             {
-                "text": "Consumptionplan -> Pay what you use",
+                "text": "Verfügbare Bezahlmodelle",
                 "type": "main"
             },
             {
-                "text": "Ressourcen sind dabei nur kurz Online",
+                "text": "Consumptionplan -> Pay what you use",
                 "type": "bullet"
             },
             {
                 "text": "Premiumplan -> Worker sind permanent verfügbar",
-                "type": "main"
+                "type": "bullet"
             },
             {
                 "text": "Das Ressourcenmanagement wird von Azure übernommen",
@@ -51,7 +51,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
             {
                 "text": "Deploymentslots für Hochverfügbarkeit / rollierende Deployments",
                 "type": "bullet"
-            },
+            }
             {
                 "text": "Über Bindings können z.B. Datenbanken direkt angesprochen werden",
                 "type": "main"
