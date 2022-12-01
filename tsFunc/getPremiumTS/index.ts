@@ -51,7 +51,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
             {
                 "text": "Deploymentslots für Hochverfügbarkeit / rollierende Deployments",
                 "type": "bullet"
-            }
+            },
             {
                 "text": "Über Bindings können z.B. Datenbanken direkt angesprochen werden",
                 "type": "main"
