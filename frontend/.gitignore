@@ -9,6 +9,8 @@
 # Node
 node_modules/*
 !node_modules/@dvag
+!node_modules/@dvag/design-system/dist
+!node_modules/@dvag/design-system-angular/lib
 npm-debug.log
 yarn-error.log
 
