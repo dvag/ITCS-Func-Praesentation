@@ -13,7 +13,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         "picturePos": "left",
         "text": [
             {
-                "text": "Functionen nach erfolgreichem Deployment in Azure einsehbar",
+                "text": "Die Functionen nach dem erfolgreichem Deployment in Azure einsehbar",
                 "type": "main"
             }
         ]

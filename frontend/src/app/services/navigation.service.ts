@@ -13,7 +13,7 @@ export class NavigationService {
     new Kapitel(1, 'Teaser', 2),
     new Kapitel(2, 'Wer wir sind', 2),
     new Kapitel(3, 'Was sind Functions?', 2),
-    new Kapitel(4, 'Warum wechseln?', 2),
+    new Kapitel(4, 'Warum lohnt der Wechsel auf Functions?', 2),
     new Kapitel(5, 'Anwendungsbereiche', 2),
     new Kapitel(6, 'Nachteile', 2),
     new Kapitel(7, 'GoLang', 2),

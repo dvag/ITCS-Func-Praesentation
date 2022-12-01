@@ -31,12 +31,14 @@ def create_teaser_response() -> Response:
     response.picture_pos = "left"
     response.text = [
         Text(text="Allgemein", type="main"), 
-        Text(text="Laufzeit begrenzt auf fünf Minuten", type="bullet"),
-        Text(text="Ein Deploymentslot pro Ressourcengruppe", type="bullet"),
-        Text(text="Consumption Plan", type="main"), 
+        Text(text="Begrenze Leistung pro Functioninstanz", type="bullet"),
+        Text(text="Für komplexe Anwendungen werden multiple Functions benötigt", type="bullet"),
+        Text(text="Kompliziertere Architektur", type="bullet"),
+        Text(text="Consumption Plan", type="main"),
+        Text(text="Laufzeit begrenzt auf zehn Minuten", type="bullet"), 
         Text(text="Function wird nach einer gewissen Zeit abgeschaltet (Kaltstartzeit)", type="bullet"),
         Text(text="Premium Plan", type="main"),
-        Text(text="Sehr viel teurer als Consumption Plan", type="bullet")
+        Text(text="Permanente Kosten und nicht pay what you use", type="bullet")
         ]
 
     return response

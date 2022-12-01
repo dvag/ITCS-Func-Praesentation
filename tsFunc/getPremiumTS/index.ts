@@ -17,11 +17,11 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
                 "type": "main"
             },
             {
-                "text": "Für Linux und Windows verfügbar",
+                "text": "Functions sind für Linux und Windows verfügbar",
                 "type": "main"
             },
             {
-                "text": "Infrastruktur von Azure verwaltet",
+                "text": "Die Infrastruktur wird von Azure verwaltet",
                 "type": "main"
             },
             {
@@ -37,15 +37,23 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
                 "type": "main"
             },
             {
-                "text": "Ressourcen werden automatisch skaliert",
+                "text": "Das Ressourcenmanagement wird von Azure übernommen",
                 "type": "main"
             },
             {
-                "text": "Routing übernimmt Azure",
-                "type": "main"
+                "text": "Die Ressourcen werden automatisch skaliert",
+                "type": "bullet"
+            },
+            {
+                "text": "Das Routing übernimmt Azure",
+                "type": "bullet"
             },
             {
                 "text": "Deploymentslots für Hochverfügbarkeit / rollierende Deployments",
+                "type": "bullet"
+            },
+            {
+                "text": "Über Bindings können z.B. Datenbanken direkt angesprochen werden",
                 "type": "main"
             }
         ]
